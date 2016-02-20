@@ -1,0 +1,247 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Savery - Too Good To Waste
+    // Bootstrap Core CSS
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    // Custom CSS
+    link(href='css/agency.css', rel='stylesheet')
+    // Custom Fonts
+    link(href='font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Kaushan+Script', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700', rel='stylesheet', type='text/css')
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+  body#page-top.index
+    // Navigation
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header.page-scroll
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand.page-scroll(href='#page-top') Savery
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li.hidden
+              a(href='#page-top')
+            li
+              a.page-scroll(href='#portfolio') Mission
+            li  
+            li
+              a.page-scroll(href='#team') Team
+            li
+              a.page-scroll(href='#contact') Contact
+        // /.navbar-collapse
+      // /.container-fluid
+    // Header
+    header
+      .container
+        .intro-text
+          .intro-heading Welcome to Savery
+          .intro-lead-in Too Good To Waste
+          // Fill the link here!!!!!!!!!
+          a(href='customerList')
+            button.logInButton
+              font(color='white') Shopper Entry
+          a(href='grocerList')
+            button.logInButton
+              font(color='white') Grocer Entry 
+    // Mission Section
+    section
+      .row
+        .col-lg-12.text-center
+          h1.section-heading Our Mission
+          br
+          .container
+            .row
+              .col-sm-4
+                img.img-responsive.img-circle(src='img/fruit.jpg', alt='')
+              .col-sm-4
+                img.img-responsive.img-circle(src='img/cheese.jpg', alt='')
+              .col-sm-4
+                img.img-responsive.img-circle(src='img/veg.jpg', alt='')
+          br
+          br
+          h3.section-subheading 
+            div(style='margin-left: 10%; width: 80%')
+              p(style='font-size:35px;') 
+                | Savery is an online platform that reduces food waste by providing access to affordable food and optimizing retailer performance. 
+                
+
+    // Team Section
+    section#team.bg-light-gray
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading Our Amazing Team
+        .row
+          .col-sm-4
+            .team-member
+              img.img-responsive.img-circle(src='img/team/1.jpg', alt='')
+              h4 Thái Vũ Hoàng Anh
+              p.text-muted Business Development
+              ul.list-inline.social-buttons
+                li
+                  a(href='#')
+                    i.fa.fa-twitter
+                li
+                  a(href='#')
+                    i.fa.fa-facebook
+                li
+                  a(href='#')
+                    i.fa.fa-linkedin
+          .col-sm-4
+            .team-member
+              img.img-responsive.img-circle(src='img/team/2.jpg', alt='')
+              h4 Jack McCarthy
+              p.text-muted Market Strategy
+              ul.list-inline.social-buttons
+                li
+                  a(href='#')
+                    i.fa.fa-twitter
+                li
+                  a(href='#')
+                    i.fa.fa-facebook
+                li
+                  a(href='#')
+                    i.fa.fa-linkedin
+          .col-sm-4
+            .team-member
+              img.img-responsive.img-circle(src='img/team/3.jpg', alt='')
+              h4 Jasmine Nguyen
+              p.text-muted Customer Relations
+              ul.list-inline.social-buttons
+                li
+                  a(href='#')
+                    i.fa.fa-twitter
+                li
+                  a(href='#')
+                    i.fa.fa-facebook
+                li
+                  a(href='#')
+                    i.fa.fa-linkedin
+        .row
+          .col-sm-4
+            .team-member
+              img.img-responsive.img-circle(src='img/team/4.jpg', alt='')
+              h4 Logan Stapleton
+              p.text-muted Native English Speaker
+              ul.list-inline.social-buttons
+                li
+                  a(href='#')
+                    i.fa.fa-twitter
+                li
+                  a(href='#')
+                    i.fa.fa-facebook
+                li
+                  a(href='#')
+                    i.fa.fa-linkedin
+          .col-sm-4
+            .team-member
+              img.img-responsive.img-circle(src='img/team/5.jpg', alt='')
+              h4 Tony Bach
+              p.text-muted Coder
+              ul.list-inline.social-buttons
+                li
+                  a(href='#')
+                    i.fa.fa-twitter
+                li
+                  a(href='#')
+                    i.fa.fa-facebook
+                li
+                  a(href='#')
+                    i.fa.fa-linkedin
+          .col-sm-4
+            .team-member
+              img.img-responsive.img-circle(src='img/team/6.jpg', alt='')
+              h4 Haihan(Angelica) Lin
+              p.text-muted Graphics Designer
+              ul.list-inline.social-buttons
+                li
+                  a(href='#')
+                    i.fa.fa-twitter
+                li
+                  a(href='#')
+                    i.fa.fa-facebook
+                li
+                  a(href='#')
+                    i.fa.fa-linkedin
+    // Contact Section
+    section#contact
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading Contact Us
+            h3.section-subheading.text-muted We would like to hear from you!
+        .row
+          .col-lg-12
+            form#contactForm(name='sentMessage', novalidate='')
+              .row
+                .col-md-6
+                  .form-group
+                    input#name.form-control(type='text', placeholder='Your Name *', required='', data-validation-required-message='Please enter your name.')
+                    p.help-block.text-danger
+                  .form-group
+                    input#email.form-control(type='email', placeholder='Your Email *', required='', data-validation-required-message='Please enter your email address.')
+                    p.help-block.text-danger
+                  .form-group
+                    input#phone.form-control(type='tel', placeholder='Your Phone *', required='', data-validation-required-message='Please enter your phone number.')
+                    p.help-block.text-danger
+                .col-md-6
+                  .form-group
+                    textarea#message.form-control(placeholder='Your Message *', required='', data-validation-required-message='Please enter a message.')
+                    p.help-block.text-danger
+                .clearfix
+                .col-lg-12.text-center
+                  #success
+                  button.btn.btn-xl(type='submit') Send Message
+    footer
+      .container
+        .row
+          .col-md-4
+            span.copyright Copyright © Savery 2016
+          .col-md-4
+            ul.list-inline.social-buttons
+              li
+                a(href='#')
+                  i.fa.fa-twitter
+              li
+                a(href='#')
+                  i.fa.fa-facebook
+              li
+                a(href='#')
+                  i.fa.fa-linkedin
+          .col-md-4
+            ul.list-inline.quicklinks
+              li
+                a(href='#') Privacy Policy
+              li
+                a(href='#') Terms of Use
+    // jQuery
+    script(src='js/jquery.js')
+    // Bootstrap Core JavaScript
+    script(src='js/bootstrap.min.js')
+    // Plugin JavaScript
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
+    script(src='js/classie.js')
+    script(src='js/cbpAnimatedHeader.js')
+    // Contact Form JavaScript
+    script(src='js/jqBootstrapValidation.js')
+    script(src='js/contact_me.js')
+    // Custom Theme JavaScript
+    script(src='js/agency.js')

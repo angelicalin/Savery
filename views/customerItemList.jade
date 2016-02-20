@@ -1,0 +1,134 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    title Search
+    // Bootstrap
+    link(rel='stylesheet', href='css/bootstrap.css')
+    // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //
+      if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  body
+    nav.navbar.navbar-inverse
+      .container-fluid
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#myInverseNavbar2')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') Savery
+        // Collect the nav links, forms, and other content for toggling
+        #myInverseNavbar2.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-left
+            li
+              a(href='#') About
+            li
+              a(href='#') Contact
+        // /.navbar-collapse
+      // /.container-fluid
+    .banner(style='text-align:center')
+      img(src='https://scontent-iad3-1.xx.fbcdn.net/hphotos-xft1/v/t35.0-12/12736685_964789636950299_1913254498_o.jpg?oh=eab6cab09212b8deb2db0a6250de5d7f&oe=56CAD414')
+    hr
+    h2.text-center
+      | Find on Savery 
+      img(src='img/mglass.png', style='height:30px')
+      | &nbsp 
+      input(type='text', name='searchKeyword', size='10')
+      button.btn.btn-danger(style='font-size:large; margin-top: -5px;') Go
+      |     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Sort By:
+      select#sortBy.form-control(name='sortBy', style='width:15%; display:inline')
+        option(value='') Discount High to Low
+        option(value='') Closest to Expiration Date
+        option(value='') Price Low to High
+        option(value='') Price High to Low
+        option(value='') Distance Near to Far
+    hr
+    .container
+      .row
+        .col-lg-2.col-md-4.col-md-offset-2.col-lg-offset-0
+          .well
+            h3.text-center Filter
+            form.form-horizontal
+              .form-group
+                label.control-label(for='location1') Distance
+                select#location1.form-control(name='')
+                  option(value='') Within 10 Miles
+                  option(value='') Within 20 Miles
+                  option(value='') Within 50 Miles
+              .form-group
+                label.control-label(for='type1') Type
+                br
+                input(type='checkbox', name='categoryOfFood', value='Vegetables')
+                | Vegetables
+                br
+                input(type='checkbox', name='categoryOfFood', value='Fruits')
+                | Fruits
+                br
+                input(type='checkbox', name='categoryOfFood', value='Dairy')
+                | Dairy
+                br
+                input(type='checkbox', name='categoryOfFood', value='Meat')
+                | Meat
+                br
+                input(type='checkbox', name='categoryOfFood', value='Seafood')
+                | Seafood
+                br
+                input(type='checkbox', name='categoryOfFood', value='Deli')
+                | Deli
+                br
+                input(type='checkbox', name='categoryOfFood', value='Snack')
+                | Snacks
+                br
+                input(type='checkbox', name='categoryOfFood', value='Nuts')
+                | Nuts and Grains
+                br
+              .form-group
+                label.control-label(for='pricefrom') Price From
+                .input-group
+                  .input-group-addon $
+                  input#pricefrom.form-control(type='text')
+              .form-group
+                label.control-label(for='priceto') Price To
+                .input-group
+                  .input-group-addon $
+                  input#priceto.form-control(type='text')
+              p.text-center
+                a.btn.btn-danger(href='#', role='button') Apply 
+        .col-lg-9.col-md-12
+          -for (var i = 0; i < 3; ++i) {
+            .row
+              each food in customerItemList
+                .col-lg-4.col-md-4.col-sm-6.col-xs-6
+                    .thumbnail
+                      a(href='customerIndividual/#{food._id}')
+                        img.img-responsive(src=food.url, alt='Thumbnail Image 1', height='150', width='150')
+                      .caption
+                        h3=food.productName
+                        p
+                          span(style='text-decoration: underline') Current price
+                          | : $#{food.discountValue}
+                          span(style='color: red')  (#{food.discountPercent}% off)
+                        p
+                          span(style='text-decoration: underline') Expiration date
+                          | : #{food.expDate}
+                        hr
+                        p.text-center
+                          a.btn.btn-info(href='customerIndividual/#{food._id}', role='button') Details
+          -}
+    footer.text-center
+      .container
+        .row
+          .col-xs-12
+            p Copyright © Savery 2016. All rights reserved.
+    // jQuery (necessary for Bootstrap's JavaScript plugins)
+    script(src='js/jquery-1.11.2.min.js')
+    // Include all compiled plugins (below), or include individual files as needed
+    script(src='js/bootstrap.min.js')

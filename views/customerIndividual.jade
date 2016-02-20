@@ -1,0 +1,92 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Item Information
+    // Bootstrap Core CSS
+    link(href='../css/bootstrap.min.css', rel='stylesheet')
+    // Custom CSS
+    link(href='../css/1-col-portfolio.css', rel='stylesheet')
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+  body
+    // Navigation
+    nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') Savery
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='#') About
+            li
+              a(href='#') Services
+            li
+              a(href='#') Contact
+        // /.navbar-collapse
+      // /.container
+    // Page Content
+    .banner(style='text-align:center')
+      img(src='https://scontent-iad3-1.xx.fbcdn.net/hphotos-xft1/v/t35.0-12/12736685_964789636950299_1913254498_o.jpg?oh=eab6cab09212b8deb2db0a6250de5d7f&oe=56CAD414')
+    .container
+      // Page Heading
+      .row
+        .col-lg-12
+          h1.page-header
+            | #{item.productName}
+      // /.row
+      // Project One
+      .row
+        .col-md-7
+          img.img-responsive(src='../#{item.url}', alt='')
+        .col-md-5
+          h3 Retailer: Kowalski's Market
+          h3
+            strike #{item.originalPrice}/#{item.unit}
+          h3(style='color:red')
+            b #{item.discountPercent}% off
+          $#{item.discountValue}/#{item.unit}
+          p
+            | #{item.description}
+          h3
+            b Expiration Date: #{item.expDate}
+          p
+            b Retailer Infomration
+            | : Kowalski's Markets offer delicious and healthy foods, culinary expertise, and inviting shopping atmospheres.
+          p
+            b Address
+            | : 1261 Grand Ave, St Paul, MN 55105
+          p
+            b Hour
+            | : Open Today, 
+            u
+              b 6AM–12AM
+          a.btn.btn-primary(href='#' style="margin-left:80px") Save
+          a.btn.btn-primary(href='../customerList' style="margin-left:20px")
+            | Back to Search
+      // /.row
+      // Footer
+      footer
+        .row
+          .col-lg-12
+            p Copyright © Savery 2016
+        // /.row
+    // /.container
+    // jQuery
+    script(src='../js/jquery.js')
+    // Bootstrap Core JavaScript
+    script(src='../js/bootstrap.min.js')

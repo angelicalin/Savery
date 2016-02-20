@@ -1,0 +1,128 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Item Entry
+    // Bootstrap Core CSS
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    link(href='css/1-col-portfolio.css', rel='stylesheet')
+    // Custom CSS
+    link(href='css/custom.css', rel='stylesheet')
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+  body
+    // Navigation
+    nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') Savery
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='#') About
+            li
+              a(href='#') Contact
+        // /.navbar-collapse
+      // /.container
+    // Page Content
+    .banner(style='text-align:center')
+      img(src='https://scontent-iad3-1.xx.fbcdn.net/hphotos-xft1/v/t35.0-12/12736685_964789636950299_1913254498_o.jpg?oh=eab6cab09212b8deb2db0a6250de5d7f&oe=56CAD414')
+    .container
+      // Page Heading
+      .row
+        .col-lg-12
+          h1.page-header
+            | Information Entry
+      // /.row
+      // Project One
+      .row
+        .col-md-7
+          img.img-responsive(src='img/upload.png', alt='', style='height: 400px; margin-left:100px;')
+          a.btn.btn-primary(href='#' style='margin-left: 165px') Upload Image
+          a.btn.btn-primary(href='#' style="margin-left: 10px") Use Image From Database
+        .col-md-5
+          form#form_id(method='post', action='addItem', onsubmit="console.log('123')")
+            h4
+                | Product Name:
+                br
+                input(type='text', name='productName')
+            h4
+                | Quantity:
+                br
+                input(type='number', name='quantity')
+                select
+                  option(value='pound') lb
+                  option(value='ounce') oz
+                  option(value='gallon') gal
+                  option(value='each') ea
+            h4
+              | Category:
+              br
+              select
+                option(value='vegetables') Vegetables
+                option(value='Fruits') Fruits
+                option(value='Dairy') Dairy
+                option(value='Meat') Meat
+                option(value='Seafood') Seafood
+                option(value='Deli') Deli
+                option(value='Snacks') Snacks
+                option(value='Nuts') Nuts and Grains
+            h4
+                | Original Price:
+                br
+                | $  
+                input(type='text', name='originalPrice', size='5')
+                |  per unit
+            h4
+                | Discount:
+                br
+                input(type='radio', name='discountSelection', value='currentPrice')
+                |  $  
+                input(type='text', name='currentPrice', size='5')
+                |  per unit / 
+                input(type='radio', name='discountSelection', value='percentOff')
+                | 
+                input(typle='text', name='percentDiscount', size='5')
+                | % off / 
+                input(type='radio', name='dynamicDiscount', value='dynamicDiscount')
+                |  Dynamic Discount 
+                a(href='dynamicDiscount')
+                  img(src='img/question.png', style='height:17px')
+
+            h4
+                | Exp. Date:
+                br
+                input(type='date', name='expDate')
+            h4
+                | Description:
+                br
+                textarea(rows='4', column='50')
+            a.btn.btn-primary.submitButton(type='submit', style='margin-left:35px;') Submit
+            a.btn.btn-primary(href='grocerList', style='margin-left:10px;') Cancel
+      // /.row
+      // Footer
+      footer
+        .row
+          .col-lg-12
+            p Copyright © Savery 2016
+        // /.row
+    // /.container
+    // jQuery
+    script(src='js/jquery.js')
+    // Bootstrap Core JavaScript
+    script(src='js/bootstrap.min.js')
+    script(src='js/utils.js')

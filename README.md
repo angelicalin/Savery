@@ -1,12 +1,10 @@
 # Savery
 
-* Project/web app that aims to reduce food waste by offering exclusive discounts on soon-to-expire grocery store items. Using our app, retailers can increase revenues, and budget shoppers can get access to affordable, healthy food.
+Project/web app that aims to reduce food waste by offering exclusive discounts on soon-to-expire grocery store items. Using our app, retailers can increase revenues, and budget shoppers can get access to affordable, healthy food.
 
-* Created for Macathon (Macalester's 24-hour hackathon/start-up competition) and placed 2nd out of 19 teams. Currently a work in progress.
+Created for Macathon (Macalester's 24-hour hackathon/start-up competition) and placed 2nd out of 19 teams. Currently a work in progress.
 
-* Tech stack: Node.js, Express, MongoDB, Bootstrap
-
-
+Tech stack: Node.js, Express, MongoDB, Bootstrap
 
 Team:
 - [Tony Bach](https://www.linkedin.com/in/phucbach): Back-end Developer

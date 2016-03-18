@@ -7,7 +7,7 @@ Created for Macathon (Macalester's 24-hour hackathon/start-up competition) and p
 Tech stack: Node.js, Express, MongoDB, Bootstrap
 
 Team:
-- [Tony Bach](https://www.linkedin.com/in/phucbach): Back-end Developer
+- Tony Bach: Back-end Developer
 - [Haihan (Angelica) Lin](https://www.linkedin.com/in/haihan-lin-871b0188): Graphics Designer
 - Logan Stapleton: Front-end Developer
 - [Jack McCarthy](https://www.linkedin.com/in/jack-w-mccarthy-0323ab83): Market Strategy
